@@ -583,3 +583,58 @@ public class TestDemo{
 		}
 	}
 }
+-------------------------------------------------
+9.Dynamic array
+
+class Array{
+	private int[] data;
+	private int foot = 0;
+	public Array(int len){	//初始化数组
+		if(len>0){
+			data = new int [len];
+		}else{
+			data = new int [1];
+		}
+	}
+
+	public void inc(int num){	//扩充数组
+		int[] z = data;
+		data = new int [data.length+num];
+		for(int x = 0;x<z.length;x++){
+			data[x] = z[x];
+		}
+	}
+	
+	public boolean add(int num){	//在规定范围内赋值
+		if(foot<data.length){
+			data[foot++] = num;
+			return true;
+		}
+		return false;
+	}
+	public int[] getArray(){
+		return data;
+	}
+}
+
+class Javatest{
+    public static void main(String args[]){
+	Array ay = new Array(5);
+	System.out.print(ay.add(1)+" ");
+	System.out.print(ay.add(1)+" ");
+	System.out.print(ay.add(1)+" ");
+	System.out.print(ay.add(1)+" ");
+	System.out.println(ay.add(1)+" ");
+	
+	for(int x = 0;x<ay.getArray().length;x++){
+		System.out.print(ay.getArray()[x]+" ");
+	}
+	ay.inc(2);
+	System.out.print(ay.add(2)+" ");
+	System.out.print(ay.add(2)+" ");
+		
+	for(int x = 0;x<ay.getArray().length;x++){
+		System.out.print(ay.getArray()[x]+" ");
+		}
+	}
+}	
