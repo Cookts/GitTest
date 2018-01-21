@@ -27,13 +27,13 @@ class Loop{
                         default : 
 				num -- ; 
                 } 
+
+class Selection{
                 System.out.println(num) ;  
 	}
 }
 -------------------------------------------------
 2.Array selection sorting
-
-class Selection{
 	public static void main(String args[]){
 		int[] num = new int[]{5,4,3,2,1};	
 		
@@ -584,8 +584,6 @@ public class TestDemo{
 	}
 }
 -----------------------------------------------------------------------------------------
-9.Dynamic array
-
 class Array{
 	private int[] data;
 	private int foot = 0;
@@ -616,25 +614,36 @@ class Array{
 		return data;
 	}
 }
+
+class SortArray extends Array{	// 继承父类
+	public SortArray(int num){
+		super(num);
+	}
+	public int[] getArray(){// 覆写排序
+		java.util.Arrays.sort(super.getArray());
+		return super.getArray();
+	}
+}
 class Javatest{
     public static void main(String args[]){
-		Array ay = new Array(5);
-		System.out.print(ay.add(1)+" ");
-		System.out.print(ay.add(1)+" ");
-		System.out.print(ay.add(1)+" ");
-		System.out.print(ay.add(1)+" ");
-		System.out.println(ay.add(1)+" ");
+		SortArray say = new SortArray(5);
+		System.out.print(say.add(1)+" ");
+		System.out.print(say.add(4)+" ");
+		System.out.print(say.add(6)+" ");
+		System.out.print(say.add(8)+" ");
+		System.out.print(say.add(2)+" ");
 	
-		for(int x = 0;x<ay.getArray().length;x++){
-			System.out.print(ay.getArray()[x]+" ");
+		for(int x = 0;x<say.getArray().length;x++){
+			System.out.print(say.getArray()[x]+" ");
 		}
-		ay.inc(2);
-		System.out.print(ay.add(2)+" ");
-		System.out.print(ay.add(2)+" ");
+		System.out.println();
+		say.inc(2);
+		System.out.print(say.add(2)+" ");
+		System.out.print(say.add(2)+" ");
 		
-		for(int x = 0;x<ay.getArray().length;x++){
-			System.out.print(ay.getArray()[x]+" ");
+		for(int y = 0;y<say.getArray().length;y++){
+			System.out.print(say.getArray()[y]+" ");
 		}
+		
 	}
-}	
-
+}
