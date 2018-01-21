@@ -8,17 +8,17 @@ class Loop{
 		switch(c) { 
 			case 'B' : 
 				num ++ ; 
-				System.out.println("ÏàÍ¬");
+				System.out.println("ç›¸åŒ");
 				break;
 			
 			case 'A' : 
 				num ++ ; 
-				System.out.println("ÏàÍ¬");
+				System.out.println("ç›¸åŒ");
 				break;
 			
 			case 'Y' : 
 				num ++ ;
-				System.out.println("ÏàÍ¬");
+				System.out.println("ç›¸åŒ");
 				break;
 			
 			case '0':
@@ -86,7 +86,7 @@ class Method{
 	
 	public static void main(String args[]){
 		Method. Person p = new Method().new Person("kts",0);
-		System.out.println("ĞÕÃû£º"+p.getName()+"ÄêÁä£º"+p.getAge());
+		System.out.println("å§“åï¼š"+p.getName()+"å¹´é¾„ï¼š"+p.getAge());
 	}
 }
 
@@ -95,27 +95,27 @@ get() and set() Static state
 class Person{
 	private String name;
 	private int age;
-	private static String country = "ÖĞ¹ú";
+	private static String country = "ä¸­å›½";
 	public  Person(String name,int age){
 		this.name = name;
 		this.age = age;
 	}	
 	
-	public static void setCountry(String country){	//¾²Ì¬±äÁ¿·½·¨±£´æÔÚ¾²Ì¬Êı¾İÇø
-		Person.country = country;		//this±íÊ¾µÄµ±Ç°¶ÔÏó¾Í²»´æÔÚ
+	public static void setCountry(String country){	//é™æ€å˜é‡æ–¹æ³•ä¿å­˜åœ¨é™æ€æ•°æ®åŒº
+		Person.country = country;		//thisè¡¨ç¤ºçš„å½“å‰å¯¹è±¡å°±ä¸å­˜åœ¨
 	}
 	public	static String getCountry(){
-		return country;	//²»¼ÓÀàÃûÒ²ÄÜÊµÏÖ
+		return country;	//ä¸åŠ ç±»åä¹Ÿèƒ½å®ç°
 	}
 	
 	public  String getInfo(){
-		return "ĞÕÃû£º"+this.name+"£¬ÄêÁä£º"+this.age+"£¬¹ú¼Ò£º"+this.country;
+		return "å§“åï¼š"+this.name+"ï¼Œå¹´é¾„ï¼š"+this.age+"ï¼Œå›½å®¶ï¼š"+this.country;
 	}
 }
 public class Z{
 	public static void main(String args[]){
-		Person p1 = new Person("¿µÌ©ËÉ",18);
-		Person.setCountry("ÖĞ»ªÃñ¹ú");	
+		Person p1 = new Person("åº·æ³°æ¾",18);
+		Person.setCountry("ä¸­åæ°‘å›½");	
 		System.out.println(p1.getCountry());
 	}
 }
@@ -147,7 +147,7 @@ class Reversal{
 
     public static void printArray(int[] temp){
         for(int z= 0;z<temp.length;z++){
-            System.out.print(temp[z]+"¡¢");
+            System.out.print(temp[z]+"ã€");
         }
     }
 }
@@ -176,7 +176,7 @@ class Reversal{
 	public static void printArray(int[][] pa){
 		for(int z = 0;z<pa.length;z++){
 			for(int u = 0;u<pa[z].length;u++){
-				System.out.print(pa[z][u]+"¡¢");
+				System.out.print(pa[z][u]+"ã€");
 			}
 			System.out.print("\n");
 		}
@@ -214,13 +214,13 @@ class Reversal{
 
 class Comparison{
 	public static void main(String args[]){
-		Person perA = new Conparison().new Person("¿µÌ©ËÉ",27);
-		Person perB = new Conparison().new Person("¿µÌ©ËÉ",27);
+		Person perA = new Conparison().new Person("åº·æ³°æ¾",27);
+		Person perB = new Conparison().new Person("åº·æ³°æ¾",27);
 		
 		if(perA.compare(perB)){
-			System.out.println("ÏàÍ¬");
+			System.out.println("ç›¸åŒ");
 		}else{
-			System.out.print("²»ÏàÍ¬");
+			System.out.print("ä¸ç›¸åŒ");
 			}
 	}
 	
@@ -289,7 +289,7 @@ class  Emp{
 		return this.dept;
 	}
 	public	String getInfo(){
-		return "¡¾EMP¡¿empno = "+this.empno+"£¬ename = "+this.ename+"£¬job = "+this.job+"£¬sal = "+this.sal+"£¬comm = "+this.comm;
+		return "ã€EMPã€‘empno = "+this.empno+"ï¼Œename = "+this.ename+"ï¼Œjob = "+this.job+"ï¼Œsal = "+this.sal+"ï¼Œcomm = "+this.comm;
 	}
 	
 }
@@ -312,7 +312,7 @@ class Dept{
 		return this.emps;
 	}
 	public	String getInfo(){
-		return "¡¾DEPT¡¿deptno = "+this.deptno+"£¬dname = "+this.dname+"£¬loc = "+this.loc;
+		return "ã€DEPTã€‘deptno = "+this.deptno+"ï¼Œdname = "+this.dname+"ï¼Œloc = "+this.loc;
 	}
 } 
 
@@ -357,14 +357,14 @@ class	Student{
 	}
 
 	public String getInfo(){
-		return "¡¾STUDENT¡¿Ñ§Éú±àºÅ£º"+this.stuid+"£¬ĞÕÃû£º"+this.name+"£¬ÄêÁä£º"+this.age;
+		return "ã€STUDENTã€‘å­¦ç”Ÿç¼–å·ï¼š"+this.stuid+"ï¼Œå§“åï¼š"+this.name+"ï¼Œå¹´é¾„ï¼š"+this.age;
 	}
 }
 class	Course{
 	private int cid;
 	private String name;
 	private int credit;
-	private StudentCourse[] studentCourses;	// Ã»¸öÊı×éÔªËØ°üº¬Ñ§ÉúµÄĞÅÏ¢£¬Ñ§µÄ¿Î³Ì£¬·ÖÊı
+	private StudentCourse[] studentCourses;	// æ²¡ä¸ªæ•°ç»„å…ƒç´ åŒ…å«å­¦ç”Ÿçš„ä¿¡æ¯ï¼Œå­¦çš„è¯¾ç¨‹ï¼Œåˆ†æ•°
 	
 	public	Course(){}
 	public Course(int cid,String name,int credit){
@@ -380,11 +380,11 @@ class	Course{
 	}
 
 	public String getInfo(){
-		return "±àºÅ£º"+this.cid;
+		return "ç¼–å·ï¼š"+this.cid;
 	}
 }  
 
-class	StudentCourse{	//Ñ§ÉúÑ¡¿Î
+class	StudentCourse{	//å­¦ç”Ÿé€‰è¯¾
 	private Student student;
 	private Course course;
 	private double score;
@@ -406,11 +406,11 @@ class	StudentCourse{	//Ñ§ÉúÑ¡¿Î
 }
 public class TestDemo{
 	public static void main(String args[]){
-		Student stu1 = new Student(01,"ÕÅÈı",18);
-		Student stu2 = new Student(02,"ÀîËÄ",18);
-		Student stu3 = new Student(03,"ÍõÎå",18);
-		Course ca = new Course(1001,"Âí¿ËË¼",3);
-		Course cb = new Course(1002,"²Ù×÷",2);
+		Student stu1 = new Student(01,"å¼ ä¸‰",18);
+		Student stu2 = new Student(02,"æå››",18);
+		Student stu3 = new Student(03,"ç‹äº”",18);
+		Course ca = new Course(1001,"é©¬å…‹æ€",3);
+		Course cb = new Course(1002,"æ“ä½œ",2);
 
 		stu1.setStudentCourses(new StudentCourse[]{
 			new StudentCourse(stu1,ca,99.9),
@@ -432,7 +432,7 @@ public class TestDemo{
 			);
 			for(int x = 0;x<ca.getStudentCourses().length;x++){
 				System.out.print(ca.getStudentCourses()[x].getStudent().getInfo());
-				System.out.print("£¬³É¼¨£º"+ca.getStudentCourses()[x].getScore());	
+				System.out.print("ï¼Œæˆç»©ï¼š"+ca.getStudentCourses()[x].getScore());	
 				System.out.println();
 			}
 	}
@@ -440,11 +440,11 @@ public class TestDemo{
 -------------------------------------------------
 8.Data table permissions
 
-class	Dept{		//²¿ÃÅĞÅÏ¢
+class	Dept{		//éƒ¨é—¨ä¿¡æ¯
 	private int did;
 	private String dname;
-	private Emp[] emps;		//¶à¸ö¹ÍÔ±
-	private Role role;		//Ò»¸ö½ÇÉ«
+	private Emp[] emps;		//å¤šä¸ªé›‡å‘˜
+	private Role role;		//ä¸€ä¸ªè§’è‰²
 	public Dept(int did,String dname){
 		this.did = did;
 		this.dname = dname;
@@ -462,14 +462,14 @@ class	Dept{		//²¿ÃÅĞÅÏ¢
 		return this.role;
 	}
 	public String getInfo(){
-		return	"¡¾²¿ÃÅ¡¿did = "+this.did+"£¬Ãû³Æ = "+this.dname;
+		return	"ã€éƒ¨é—¨ã€‘did = "+this.did+"ï¼Œåç§° = "+this.dname;
 	}
 }
 
-class	Emp{	//¹ÍÔ±ĞÅÏ¢
+class	Emp{	//é›‡å‘˜ä¿¡æ¯
 	private int eid;
 	private String ename;
-	private Dept dept;	//²¿ÃÅ
+	private Dept dept;	//éƒ¨é—¨
 	public Emp(int eid,String ename){
 		this.eid = eid;
 		this.ename = ename;
@@ -481,15 +481,15 @@ class	Emp{	//¹ÍÔ±ĞÅÏ¢
 		return this.dept;
 	}
 	public String getInfo(){
-		return "¡¾¹ÍÔ±¡¿eid = "+this.eid+"£¬Ãû³Æ = "+this.ename;
+		return "ã€é›‡å‘˜ã€‘eid = "+this.eid+"ï¼Œåç§° = "+this.ename;
 	}
 }
 
-class	Role{	//½ÇÉ«ĞÅÏ¢
+class	Role{	//è§’è‰²ä¿¡æ¯
 	private int rid;
 	private String title;
-	private Dept[] depts;	//¶à¸ö²¿ÃÅ
-	private Action[] actions;		//¶à¸öÈ¨ÏŞ
+	private Dept[] depts;	//å¤šä¸ªéƒ¨é—¨
+	private Action[] actions;		//å¤šä¸ªæƒé™
 	public Role(int rid,String title){
 		this.rid = rid;
 		this.title = title;
@@ -507,11 +507,11 @@ class	Role{	//½ÇÉ«ĞÅÏ¢
 		return this.actions;
 	}
 	public String getInfo(){
-		return "¡¾½ÇÉ«¡¿rid = "+this.rid+"£¬title = "+this.title;
+		return "ã€è§’è‰²ã€‘rid = "+this.rid+"ï¼Œtitle = "+this.title;
 	}
 }
 
-class	Action{	//È¨ÏŞ
+class	Action{	//æƒé™
 	private int aid;
 	private String title;
 	private String flag;
@@ -528,14 +528,14 @@ class	Action{	//È¨ÏŞ
 		return this.roles;
 	}
 	public String getInfo(){
-		return "¡¾È¨ÏŞ¡¿aid = "+this.aid+"£¬title = "+this.title+"£¬flag = "+this.flag;
+		return "ã€æƒé™ã€‘aid = "+this.aid+"ï¼Œtitle = "+this.title+"ï¼Œflag = "+this.flag;
 	}
 }
 
 public class TestDemo{
 	public static void main(String args[]){
-		Dept d10 = new Dept(10,"²ÆÎñ²¿");
-		Dept d20 = new Dept(20,"ÊĞ³¡²¿");
+		Dept d10 = new Dept(10,"è´¢åŠ¡éƒ¨");
+		Dept d20 = new Dept(20,"å¸‚åœºéƒ¨");
 
 		Emp e7360 = new Emp(7369,"SMITH");
 		Emp e7566 = new Emp(7566,"AlLen");
@@ -543,43 +543,98 @@ public class TestDemo{
 		Emp e7839 = new Emp(7839,"KING");
 		Emp e7788 = new Emp(7788,"SCOTT");
 
-		Role r100 = new Role(100,"¹ÜÀí²ã");
-		Role r200 = new Role(200,"¹ÜÀí²ã");
+		Role r100 = new Role(100,"ç®¡ç†å±‚");
+		Role r200 = new Role(200,"ç®¡ç†å±‚");
 
-		Action a1000 = new Action(1000,"¹ÍÔ±ÈëÖ°","emp:add");
-		Action a2000 = new Action(2000,"¹ÍÔ±½úÉı","emp:edit");
-		Action a3000 = new Action(3000,"·¢²¼¹«¸æ","news:add:");
-		Action a6000 = new Action(6000,"²é¿´¿Í»§ĞÅÏ¢","customer:list");
-		Action a7000 = new Action(7000,"»Ø·Ã¼ÇÂ¼","customer:add");
-		//ÉèÖÃ½ÇÉ«ºÍÈ¨ÏŞµÄ¹ØÏµ
+		Action a1000 = new Action(1000,"é›‡å‘˜å…¥èŒ","emp:add");
+		Action a2000 = new Action(2000,"é›‡å‘˜æ™‹å‡","emp:edit");
+		Action a3000 = new Action(3000,"å‘å¸ƒå…¬å‘Š","news:add:");
+		Action a6000 = new Action(6000,"æŸ¥çœ‹å®¢æˆ·ä¿¡æ¯","customer:list");
+		Action a7000 = new Action(7000,"å›è®¿è®°å½•","customer:add");
+		//è®¾ç½®è§’è‰²å’Œæƒé™çš„å…³ç³»
 		r100.setActions(new Action[]{a1000,a2000,a3000});
 		r200.setActions(new Action[]{a6000,a7000});
-		//ÉèÖÃÈ¨ÏŞºÍ½ÇÉ«µÄ¹ØÏµ
+		//è®¾ç½®æƒé™å’Œè§’è‰²çš„å…³ç³»
 		a1000.setRoles(new Role[]{r100});
 		a2000.setRoles(new Role[]{r200});
 		a3000.setRoles(new Role[]{r100});
 		a6000.setRoles(new Role[]{r200});
 		a7000.setRoles(new Role[]{r200});
-		//ÉèÖÃ²¿ÃÅºÍ½ÇÉ«µÄ¹ØÏµ
+		//è®¾ç½®éƒ¨é—¨å’Œè§’è‰²çš„å…³ç³»
 		d10.setRole(r100);
 		d20.setRole(r200);
-		//½ÇÉ«ºÍ²¿ÃÅµÄ¹ØÏµ
+		//è§’è‰²å’Œéƒ¨é—¨çš„å…³ç³»
 		r100.setDepts(new Dept[]{d10});
 		r200.setDepts(new Dept[]{d20});
-		//²¿ÃÅºÍ¹ÍÔ±
+		//éƒ¨é—¨å’Œé›‡å‘˜
 		d10.setEmps(new Emp[]{e7360,e7566,e7902});
 		d20.setEmps(new Emp[]{e7839,e7788});
-		//¹ÍÔ±ºÍ²¿ÃÅ
+		//é›‡å‘˜å’Œéƒ¨é—¨
 		e7360.setDept(d10);
 		e7566.setDept(d10);
 		e7902.setDept(d10);
 		e7839.setDept(d20);
 		e7788.setDept(d20);
 
-		System.out.print(e7360.getInfo()+"£¬"+e7360.getDept().getInfo()+"\n");	//¸ÃÔ±¹¤¶ÔÓ¦µÄ²¿ÃÅ
-		System.out.print(e7360.getDept().getRole().getInfo()+"\n");	//²¿ÃÅ¶ÔÓ¦½ÇÉ«
+		System.out.print(e7360.getInfo()+"ï¼Œ"+e7360.getDept().getInfo()+"\n");	//è¯¥å‘˜å·¥å¯¹åº”çš„éƒ¨é—¨
+		System.out.print(e7360.getDept().getRole().getInfo()+"\n");	//éƒ¨é—¨å¯¹åº”è§’è‰²
 		for(int x = 0;x<e7360.getDept().getRole().getActions().length;x++){
 			System.out.println(e7360.getDept().getRole().getActions()[x].getInfo());
 		}
 	}
 }
+-----------------------------------------------------------------------------------------
+9.Dynamic array
+
+class Array{
+	private int[] data;
+	private int foot = 0;
+	public Array(int len){	//åˆå§‹åŒ–æ•°ç»„
+		if(len>0){
+			data = new int [len];
+		}else{
+			data = new int [1];
+		}
+	}
+
+	public void inc(int num){	//æ‰©å……æ•°ç»„
+		int[] z = data;
+		data = new int [data.length+num];
+		for(int x = 0;x<z.length;x++){
+			data[x] = z[x];
+		}
+	}
+	
+	public boolean add(int num){	//åœ¨è§„å®šèŒƒå›´å†…èµ‹å€¼
+		if(foot<data.length){
+			data[foot++] = num;
+			return true;
+		}
+		return false;
+	}
+	public int[] getArray(){
+		return data;
+	}
+}
+class Javatest{
+    public static void main(String args[]){
+		Array ay = new Array(5);
+		System.out.print(ay.add(1)+" ");
+		System.out.print(ay.add(1)+" ");
+		System.out.print(ay.add(1)+" ");
+		System.out.print(ay.add(1)+" ");
+		System.out.println(ay.add(1)+" ");
+	
+		for(int x = 0;x<ay.getArray().length;x++){
+			System.out.print(ay.getArray()[x]+" ");
+		}
+		ay.inc(2);
+		System.out.print(ay.add(2)+" ");
+		System.out.print(ay.add(2)+" ");
+		
+		for(int x = 0;x<ay.getArray().length;x++){
+			System.out.print(ay.getArray()[x]+" ");
+		}
+	}
+}	
+
